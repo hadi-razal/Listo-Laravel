@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController
 {
+
+//This is to go to login view
+    public function index(Request $request){
+       return view('auth.login');
+    }
+
+
+// this is for login action
     public function login(Request $request){
 
         $credentials = $request->only('email', 'password');
