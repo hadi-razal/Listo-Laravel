@@ -9,7 +9,7 @@ class RegisterController
 {
 
     public function index(Request $request){
-        return view('auth.register')
+        return view('auth.register');
     }
 
 
