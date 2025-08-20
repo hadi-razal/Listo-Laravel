@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class RegisterController
 {
+
+    public function index(Request $request){
+        return view('auth.register')
+    }
+
+
     public function register(Request $request){
 
         $request->validate([
