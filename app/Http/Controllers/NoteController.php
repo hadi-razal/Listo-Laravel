@@ -11,7 +11,6 @@ class NoteController
     return view("notes.index");
     }
 
-
     public function create(Request $request){
 
         $data = $request->validate([
@@ -28,6 +27,20 @@ class NoteController
         if(!$note){
             return back()->with('error', 'There was an error creating the note');
         }
+    }
+
+
+    public function delete(Note $note){
+       $note-delete();
+    }
+
+
+    public function update(Request $request, $id){
+        $note = Note::update($id,[
+            'title'=> $request->title,
+            'body'=> $request->body
+        ]);
+        return view('notes.edit', ['note' => $note]);
     }
 
 }
