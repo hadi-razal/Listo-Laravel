@@ -42,5 +42,6 @@ class NoteController
         ]);
         return view('notes.edit', ['note' => $note]);
     }
+    
 
-}
+} 
