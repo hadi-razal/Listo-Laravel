@@ -1,24 +1,28 @@
 <?php 
 
+namespace App\Http\Controllers;
 
-namespace App\http\controllers;
-
-use App\illustrate\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Auth;
 
-
-
-class forgotPasswordController
+class ForgotPasswordController
 {
-
-
-    public function index(Request $request){
+    public function index(Request $request)
+    {
         return view('auth.forgotPassword');
     }
 
-    public function resetpassword(Request $request){
+    public function resetPasswordRequest(Request $request)
+    {
+        $request->validate([
+            "email" => "required|email"
+        ]);
 
-      
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status;
     }
-
 }
