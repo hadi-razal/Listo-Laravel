@@ -29,7 +29,5 @@ class RegisterController
 
         return view('login', ['message' => 'Registration successful. Please log in.',"userDetails" => $user ]);
 
-
-
     }
 }
