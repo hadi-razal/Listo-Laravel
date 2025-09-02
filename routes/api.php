@@ -11,6 +11,6 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 //Forgot password API routes
-Route::post('/forgot-password', [ForgotPasswordController::class, 'resetPasswordRequest'])->name('password.email');
+Route::post('/forgot-password', [ForgotPasswordController::class, 'resetPasswordRequest'])->name('password.resetPasswordRequest');
 Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('password.update');
