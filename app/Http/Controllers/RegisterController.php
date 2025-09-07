@@ -9,7 +9,7 @@ class RegisterController
 {
 
     public function index(Request $request){
-        return view('auth.register');
+        return view('auth.Register');
     }
 
 
@@ -27,7 +27,7 @@ class RegisterController
             'name'=>$request->Name,
         ]);
 
-        return view('login', ['message' => 'Registration successful. Please log in.',"userDetails" => $user ]);
+        return view('auth.Login', ['message' => 'Registration successful. Please log in.',"userDetails" => $user ]);
 
     }
 }

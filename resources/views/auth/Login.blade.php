@@ -1,3 +1,6 @@
 <div>
-    <!-- The whole future lies in uncertainty: live immediately. - Seneca -->
+    
+    <h1>Login Page</h1>
+    <p>Welcome back! Please log in to your account.</p>
+
 </div>
