@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class NoteController
 {
     public function index(){
-    return view("notes.index");
+    return view("auth.Note");
     }
 
     public function create(Request $request){
@@ -32,16 +32,9 @@ class NoteController
 
     public function delete(Note $note){
        $note-delete();
-    }
 
+       return response()->json(['status'=> 'success', 'message'=> 'Note deleted successfully' ]);
 
-    public function update(Request $request, $id){
-        $note = Note::update($id,[
-            'title'=> $request->title,
-            'body'=> $request->body
-        ]);
-        return view('notes.edit', ['note' => $note]);
     }
     
-
 } 
