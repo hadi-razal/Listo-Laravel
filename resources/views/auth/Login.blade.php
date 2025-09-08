@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -275,3 +276,11 @@
         @endif
     </body>
 </html>
+=======
+<div>
+    
+    <h1>Login Page</h1>
+    <p>Welcome back! Please log in to your account.</p>
+
+</div>
+>>>>>>> e65ea04
