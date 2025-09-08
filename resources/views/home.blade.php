@@ -7,11 +7,22 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <title class="title-out">Home - Listo</title>
+    <title>Home - Listo</title>
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus nisi neque facilis cum tempora tenetur,
-        voluptate, beatae atque doloribus, quas similique debitis quae dicta saepe. Quasi illum tempore in iste officia,
-        quis vitae reprehenderit?</p>
+   
 
 
 </head>
+
+<body>
+
+
+    <title class="title-out">Home - Listo</title>
+
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus nisi neque facilis cum tempora tenetur,
+        voluptate, beatae atque doloribus, quas similique debitis quae dicta saepe. Quasi illum tempore in iste officia,
+        quis vitae reprehenderit?</p>
+    
+</body>
+
+</html>
