@@ -6,6 +6,11 @@ use App\Http\Controllers\RegisterController;
 
 //AUTHENTICATIONS
 
+//home
+Route::get('/', function(){
+    return view('home');
+});
+
 //Register and Login routes
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
@@ -16,4 +21,4 @@ Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showRes
 Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('password.update');
 
 
-//add notes
+//add note
