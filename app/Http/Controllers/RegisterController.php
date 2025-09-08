@@ -8,26 +8,28 @@ use Illuminate\Http\Request;
 class RegisterController
 {
 
-    public function index(Request $request){
-        return view('auth.Register');
+    public function index(Request $request)
+    {
+        return view('auth.register');
     }
 
 
-    public function register(Request $request){
+    public function register(Request $request)
+    {
 
         $request->validate([
-            'email'=>['required','email'],
-            'password'=>['required','min:8'],
-            'Name'=>['required','min:3'],
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:8'],
+            'Name' => ['required', 'min:3'],
         ]);
 
         $user = User::create([
-            'email'=>$request->email,
-            'password'=>bcrypt($request->password),
-            'name'=>$request->Name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'name' => $request->Name,
         ]);
 
-        return view('auth.Login', ['message' => 'Registration successful. Please log in.',"userDetails" => $user ]);
+        return view('auth.Login', ['message' => 'Registration successful. Please log in.', "userDetails" => $user]);
 
     }
 }

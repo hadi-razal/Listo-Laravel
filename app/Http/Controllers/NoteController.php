@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class NoteController
 {
-    public function index(){
-    return view("auth.Note");
+    public function index()
+    {
+        return view("auth.note");
     }
 
-    public function create(Request $request){
+    public function create(Request $request)
+    {
 
         $data = $request->validate([
             'title' => 'required|min:3|max:255',
@@ -24,17 +26,18 @@ class NoteController
             'body' => $data['body']
         ]);
 
-        if(!$note){
+        if (!$note) {
             return back()->with('error', 'There was an error creating the note');
         }
     }
 
 
-    public function delete(Note $note){
-       $note-delete();
+    public function delete(Note $note)
+    {
+        $note -> delete();
 
-       return response()->json(['status'=> 'success', 'message'=> 'Note deleted successfully' ]);
+        return response()->json(['status' => 'success', 'message' => 'Note deleted successfully']);
 
     }
-    
-} 
+
+}
