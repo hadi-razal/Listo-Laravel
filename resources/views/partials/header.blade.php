@@ -25,7 +25,7 @@
   </div>
 
   <!-- Mobile Nav -->
-  <nav id="mobile-menu" class="hidden flex-col items-center bg-amber-700 md:hidden pb-4 space-y-4 text-lg">
+  <nav id="mobile-menu" class="hidden flex-col items-center bg-amber-700 md:hidden pb-4 space-y-4 text-lg h-[90vh]">
     <a href="/" class="hover:text-amber-300 transition">Home</a>
     <a href="/login" class="hover:text-amber-300 transition">Login</a>
     <a href="/register" class="bg-amber-600 px-4 py-2 rounded-xl hover:bg-amber-500 transition">
