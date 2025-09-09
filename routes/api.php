@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -8,7 +9,7 @@ use App\Http\Controllers\RegisterController;
 
 //Register and Login routes
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
-Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/api/login', [LoginController::class, 'login'])->name('login');
 
 //Forgot password API routes
 Route::post('/forgot-password', [ForgotPasswordController::class, 'resetPasswordRequest'])->name('password.resetPasswordRequest');
@@ -16,4 +17,3 @@ Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showRes
 Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('password.update');
 
 
-//add note
